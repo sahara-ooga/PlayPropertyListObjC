@@ -14,6 +14,8 @@
 		1F8525111EEA393300B2AF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8525101EEA393300B2AF07 /* Assets.xcassets */; };
 		1F8525141EEA393300B2AF07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8525121EEA393300B2AF07 /* LaunchScreen.storyboard */; };
 		1F85251F1EEA393300B2AF07 /* PlayPropertyListObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F85251E1EEA393300B2AF07 /* PlayPropertyListObjCTests.m */; };
+		1F85252E1EEA3EF100B2AF07 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F85252B1EEA3EF100B2AF07 /* Address.m */; };
+		1F85252F1EEA3EF100B2AF07 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F85252D1EEA3EF100B2AF07 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		1F85251A1EEA393300B2AF07 /* PlayPropertyListObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayPropertyListObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F85251E1EEA393300B2AF07 /* PlayPropertyListObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayPropertyListObjCTests.m; sourceTree = "<group>"; };
 		1F8525201EEA393300B2AF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F85252A1EEA3EF100B2AF07 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		1F85252B1EEA3EF100B2AF07 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		1F85252C1EEA3EF100B2AF07 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		1F85252D1EEA3EF100B2AF07 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		1F8525031EEA393300B2AF07 /* PlayPropertyListObjC */ = {
 			isa = PBXGroup;
 			children = (
+				1F8525291EEA3EBA00B2AF07 /* Models */,
 				1F8525071EEA393300B2AF07 /* AppDelegate.h */,
 				1F8525081EEA393300B2AF07 /* AppDelegate.m */,
 				1F85250A1EEA393300B2AF07 /* ViewController.h */,
@@ -109,6 +116,17 @@
 				1F8525201EEA393300B2AF07 /* Info.plist */,
 			);
 			path = PlayPropertyListObjCTests;
+			sourceTree = "<group>";
+		};
+		1F8525291EEA3EBA00B2AF07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F85252A1EEA3EF100B2AF07 /* Address.h */,
+				1F85252B1EEA3EF100B2AF07 /* Address.m */,
+				1F85252C1EEA3EF100B2AF07 /* Person.h */,
+				1F85252D1EEA3EF100B2AF07 /* Person.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +235,8 @@
 			files = (
 				1F85250C1EEA393300B2AF07 /* ViewController.m in Sources */,
 				1F8525091EEA393300B2AF07 /* AppDelegate.m in Sources */,
+				1F85252F1EEA3EF100B2AF07 /* Person.m in Sources */,
+				1F85252E1EEA3EF100B2AF07 /* Address.m in Sources */,
 				1F8525061EEA393300B2AF07 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
