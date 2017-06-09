@@ -24,16 +24,38 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+-(void)testSavePlist{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* filePath = [directory stringByAppendingPathComponent:@"data.plist"];
+    NSArray* array = @[@"北海道", @"青森県", @"岩手県",@"秋田県"];
+    BOOL successful = [array writeToFile:filePath atomically:NO];
+    XCTAssertTrue(successful);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)testLoadPlist{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* filePath = [directory stringByAppendingPathComponent:@"data.plist"];
+    NSArray* array = @[@"北海道", @"青森県", @"岩手県",@"秋田県"];
+    [array writeToFile:filePath atomically:NO];
+    
+    NSArray *loadedArray = [[NSArray alloc] initWithContentsOfFile:filePath];
+    XCTAssertNotNil(loadedArray);
+}
+
+-(void)testLoadedPlistIsTheSame{
+    NSString *directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* filePath = [directory stringByAppendingPathComponent:@"data.plist"];
+    NSArray* array = @[@"北海道", @"青森県", @"岩手県",@"秋田県"];
+    [array writeToFile:filePath atomically:NO];
+    
+    NSArray *loadedArray = [[NSArray alloc] initWithContentsOfFile:filePath];
+    
+    if (loadedArray) {
+        [loadedArray enumerateObjectsUsingBlock:^(NSString* string, NSUInteger idx, BOOL *stop){
+            NSString* referencedString = array[idx];
+            XCTAssertEqualObjects(string, referencedString);
+        }];
+    }
 }
 
 @end
